@@ -66,16 +66,23 @@
       color: #0f6ea8;
     }
 
-    .hero {
-      min-height: 78vh;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(120deg, rgba(7,42,72,0.93), rgba(11,91,133,0.78)),
-        url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1600&q=80')
+  .hero {
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(6, 25, 43, 0.92) 0%,
+            rgba(7, 44, 70, 0.78) 48%,
+            rgba(7, 44, 70, 0.30) 100%
+        ),
+        url('images/hero-lighters.png')
         center/cover no-repeat;
-      color: white;
-    }
+
+    color: white;
+}
 
     .hero-inner {
       max-width: 1180px;
@@ -447,16 +454,25 @@
 
 <section class="hero">
   <div class="hero-inner">
-    <h1>Connecting Quality Products with Global Markets.</h1>
-
+    <div class="hero-badge">
+      LIGHTER WHOLESALE · OEM · GLOBAL SUPPLY
+    </div>
+    <h1>
+      Wholesale Lighters
+      for Global Markets.
+    </h1>
     <p>
-      FLYSEA GLOBAL INC. provides reliable sourcing, wholesale distribution,
-      OEM customization and international trade solutions for businesses worldwide.
+      FLYSEA GLOBAL INC. specializes in open flame lighters,
+      jet flame lighters and torch lighters for wholesale,
+      distribution and OEM customization.
     </p>
-
     <div class="buttons">
-      <a class="btn btn-primary" href="#contact">Contact Us</a>
-      <a class="btn btn-outline" href="#services">Our Services</a>
+      <a class="btn btn-primary" href="#products">
+        View Lighters
+      </a>
+      <a class="btn btn-outline" href="#contact">
+        Request a Quote
+      </a>
     </div>
   </div>
 </section>
