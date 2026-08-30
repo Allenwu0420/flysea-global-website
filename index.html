@@ -282,6 +282,151 @@
         padding: 30px;
       }
     }
+    /* ==========================================
+   PRODUCT CATALOG
+========================================== */
+
+.products-section {
+  background: #f7f9fb;
+  padding: 100px 24px;
+}
+.product-intro {
+  margin-bottom: 20px;
+}
+/* CATEGORY */
+.product-category {
+  margin-top: 90px;
+}
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 50px;
+  padding-bottom: 24px;
+  margin-bottom: 36px;
+  border-bottom: 1px solid #dfe5ea;
+}
+.category-header h3 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin-top: 8px;
+  color: #102b46;
+}
+.category-header p {
+  max-width: 520px;
+  color: #667788;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.category-number {
+  display: inline-block;
+  color: #0f6ea8;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+/* PRODUCT GRID */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+/* PRODUCT CARD */
+.product-card {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e3e8ed;
+  border-radius: 16px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.product-card:hover {
+  transform: translateY(-7px);
+  box-shadow:
+    0 18px 45px
+    rgba(20, 40, 60, 0.13);
+}
+/* PRODUCT IMAGE */
+.product-image {
+  width: 100%;
+  height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #ffffff;
+}
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 16px;
+  transition: transform 0.35s ease;
+}
+.product-card:hover .product-image img {
+  transform: scale(1.025);
+}
+/* PRODUCT INFORMATION */
+.product-info {
+  position: relative;
+  padding: 22px 22px 26px;
+  border-top: 1px solid #eef1f4;
+}
+.model-label {
+  display: block;
+  color: #8b98a5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+.model-number {
+  display: inline-block;
+  color: #102b46;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.product-info h4 {
+  margin: 0;
+  color: #243a50;
+  font-size: 17px;
+  font-weight: 600;
+}
+/* TABLET */
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+  .category-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+/* MOBILE */
+@media (max-width: 600px) {
+  .products-section {
+    padding: 70px 18px;
+  }
+  .product-category {
+    margin-top: 65px;
+  }
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .product-image {
+    height: 300px;
+  }
+  .category-header h3 {
+    font-size: 27px;
+  }
+}
   </style>
 </head>
 
@@ -342,48 +487,634 @@
   </div>
 </section>
 
-<section id="products" class="light">
-  <div class="container">
-    <div class="section-label">Products</div>
-    <h2>Product Solutions for Business Customers</h2>
+<!-- ========================================
+     PRODUCTS
+========================================= -->
 
-    <p class="lead">
-      We work with selected manufacturing and supply partners to provide
-      competitive products for wholesale and distribution markets.
+<section id="products" class="products-section">
+
+  <div class="container">
+
+    <div class="section-label">Our Products</div>
+
+    <h2>Our Lighter Collection</h2>
+
+    <p class="lead product-intro">
+      Explore our collection of open flame lighters, jet flame lighters
+      and torch lighters designed for wholesale, distribution and business customers.
     </p>
 
-    <div class="grid">
-      <div class="card">
-        <h3>Consumer Products</h3>
+
+    <!-- ========================================
+         01 OPEN FLAME
+    ========================================= -->
+
+    <div class="product-category">
+
+      <div class="category-header">
+
+        <div>
+          <span class="category-number">01</span>
+          <h3>Open Flame Lighters</h3>
+        </div>
+
         <p>
-          Selected products for wholesale, retail and distribution channels.
+          Classic open flame lighter designs for wholesale,
+          retail and business distribution.
         </p>
+
+      </div>
+      <div class="product-grid">
+
+
+        <!-- MODEL 160 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img
+              src="images/160.png"
+              alt="Model 160 Open Flame Lighter"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-info">
+
+            <span class="model-label">MODEL</span>
+
+            <span class="model-number">160</span>
+
+            <h4>Open Flame Lighter</h4>
+          </div>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Custom Products</h3>
+    </div>
+
+    <!-- ========================================
+         02 JET FLAME
+    ========================================= -->
+
+    <div class="product-category">
+
+      <div class="category-header">
+
+        <div>
+          <span class="category-number">02</span>
+          <h3>Jet Flame Lighters</h3>
+        </div>
+
         <p>
-          Product customization, packaging solutions and private label support.
+          Wind-resistant jet flame lighter models available in
+          single, dual, triple and quad flame configurations.
         </p>
+
       </div>
 
-      <div class="card">
-        <h3>Wholesale Supply</h3>
-        <p>
-          Flexible sourcing solutions for distributors, retailers and business buyers.
-        </p>
+
+      <div class="product-grid">
+
+
+        <!-- 335 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="images/335.png"
+                 alt="Model 335 Single Jet Lighter"
+                 loading="lazy">
+          </div>
+
+          <div class="product-info">
+
+            <span class="model-label">MODEL</span>
+            <span class="model-number">335</span>
+
+            <h4>Single Jet Lighter</h4>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 350 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="images/350.png"
+                 alt="Model 350 Quad Jet Lighter"
+                 loading="lazy">
+          </div>
+
+          <div class="product-info">
+
+            <span class="model-label">MODEL</span>
+            <span class="model-number">350</span>
+
+            <h4>Quad Jet Lighter</h4>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 356 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="images/356.png"
+                 alt="Model 356 Dual Jet Lighter"
+                 loading="lazy">
+          </div>
+
+          <div class="product-info">
+
+            <span class="model-label">MODEL</span>
+            <span class="model-number">356</span>
+
+            <h4>Dual Jet Lighter</h4>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 371 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="images/371.png"
+                 alt="Model 371 Triple Jet Lighter"
+                 loading="lazy">
+          </div>
+
+          <div class="product-info">
+
+            <span class="model-label">MODEL</span>
+            <span class="model-number">371</span>
+
+            <h4>Triple Jet Lighter</h4>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 372 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="images/372.png"
+                 alt="Model 372 Single Jet Lighter"
+                 loading="lazy">
+          </div>
+
+          <div class="product-info">
+
+            <span class="model-label">MODEL</span>
+            <span class="model-number">372</span>
+
+            <h4>Single Jet Lighter</h4>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 381 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="images/381.png"
+                 alt="Model 381 Dual Jet Lighter"
+                 loading="lazy">
+          </div>
+
+          <div class="product-info">
+
+            <span class="model-label">MODEL</span>
+            <span class="model-number">381</span>
+
+            <h4>Dual Jet Lighter</h4>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 385 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="images/385.png"
+                 alt="Model 385 Triple Jet Lighter"
+                 loading="lazy">
+          </div>
+
+          <div class="product-info">
+
+            <span class="model-label">MODEL</span>
+            <span class="model-number">385</span>
+
+            <h4>Triple Jet Lighter</h4>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 385-1 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="images/385-1.png"
+                 alt="Model 385-1 Single Jet Lighter"
+                 loading="lazy">
+          </div>
+
+          <div class="product-info">
+
+            <span class="model-label">MODEL</span>
+            <span class="model-number">385-1</span>
+
+            <h4>Single Jet Lighter</h4>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 385-2 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="images/385-2.png"
+                 alt="Model 385-2 Angled Single Jet Lighter"
+                 loading="lazy">
+          </div>
+
+          <div class="product-info">
+
+            <span class="model-label">MODEL</span>
+            <span class="model-number">385-2</span>
+
+            <h4>Angled Single Jet Lighter</h4>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 389 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="images/389.png"
+                 alt="Model 389 Single Jet Lighter"
+                 loading="lazy">
+          </div>
+
+          <div class="product-info">
+
+            <span class="model-label">MODEL</span>
+            <span class="model-number">389</span>
+
+            <h4>Single Jet Lighter</h4>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 391 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="images/391.png"
+                 alt="Model 391 Dual Jet Lighter"
+                 loading="lazy">
+          </div>
+
+          <div class="product-info">
+
+            <span class="model-label">MODEL</span>
+            <span class="model-number">391</span>
+
+            <h4>Dual Jet Lighter</h4>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 392 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="images/392.png"
+                 alt="Model 392 Single Jet Lighter"
+                 loading="lazy">
+          </div>
+
+          <div class="product-info">
+
+            <span class="model-label">MODEL</span>
+            <span class="model-number">392</span>
+
+            <h4>Single Jet Lighter</h4>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 393 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="images/393.png"
+                 alt="Model 393 Triple Jet Lighter"
+                 loading="lazy">
+          </div>
+
+          <div class="product-info">
+
+            <span class="model-label">MODEL</span>
+            <span class="model-number">393</span>
+
+            <h4>Triple Jet Lighter</h4>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 395 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="images/395.png"
+                 alt="Model 395 Single Jet Lighter"
+                 loading="lazy">
+          </div>
+
+          <div class="product-info">
+
+            <span class="model-label">MODEL</span>
+            <span class="model-number">395</span>
+
+            <h4>Single Jet Lighter</h4>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 396 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="images/396.png"
+                 alt="Model 396 Single Jet Lighter"
+                 loading="lazy">
+          </div>
+
+          <div class="product-info">
+
+            <span class="model-label">MODEL</span>
+            <span class="model-number">396</span>
+
+            <h4>Single Jet Lighter</h4>
+
+          </div>
+
+        </div>
+
+
       </div>
 
-      <div class="card">
-        <h3>Global Sourcing</h3>
+    </div>
+
+
+
+    <!-- ========================================
+         03 TORCH
+    ========================================= -->
+
+    <div class="product-category">
+
+      <div class="category-header">
+
+        <div>
+          <span class="category-number">03</span>
+          <h3>Torch Lighters</h3>
+        </div>
+
         <p>
-          Access to manufacturing partners and international supply networks.
+          High-output torch lighter models designed for customers
+          requiring a stronger and more concentrated flame.
         </p>
+
+      </div>
+
+
+      <div class="product-grid">
+
+
+        <!-- 715 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="images/715.png"
+                 alt="Model 715 Torch Lighter"
+                 loading="lazy">
+          </div>
+
+          <div class="product-info">
+
+            <span class="model-label">MODEL</span>
+            <span class="model-number">715</span>
+
+            <h4>Torch Lighter</h4>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- 717 -->
+
+        <div class="product-card">
+
+          <div class="product-image">
+            <img src="images/717.png"
+                 alt="Model 717 Mini Torch"
+                 loading="lazy">
+          </div>
+
+          <div class="product-info">
+
+            <span class="model-label">MODEL</span>
+            <span class="model-number">717</span>
+
+            <h4>Mini Torch</h4>
+
+          </div>
+
+        </div>
+        <!-- 718 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/718.png"
+                 alt="Model 718 Mini Torch"
+                 loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="model-label">MODEL</span>
+            <span class="model-number">718</span>
+            <h4>Mini Torch</h4>
+          </div>
+        </div>
+        <!-- 718-4 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/718-4.png"
+                 alt="Model 718-4 Mini Torch"
+                 loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="model-label">MODEL</span>
+            <span class="model-number">718-4</span>
+            <h4>Mini Torch</h4>
+          </div>
+        </div>
+        <!-- 719 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/719.png"
+                 alt="Model 719 Torch Lighter"
+                 loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="model-label">MODEL</span>
+            <span class="model-number">719</span>
+            <h4>Torch Lighter</h4>
+          </div>
+        </div>
+        <!-- 720 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/720.png"
+                 alt="Model 720 Mini Torch"
+                 loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="model-label">MODEL</span>
+            <span class="model-number">720</span>
+            <h4>Mini Torch</h4>
+          </div>
+        </div>
+        <!-- 721 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/721.png"
+                 alt="Model 721 Mini Torch"
+                 loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="model-label">MODEL</span>
+            <span class="model-number">721</span>
+            <h4>Mini Torch</h4>
+          </div>
+        </div>
+        <!-- 722 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/722.png"
+                 alt="Model 722 Mini Torch"
+                 loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="model-label">MODEL</span>
+            <span class="model-number">722</span>
+            <h4>Mini Torch</h4>
+          </div>
+        </div>
+        <!-- 725 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/725.png"
+                 alt="Model 725 Mini Torch"
+                 loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="model-label">MODEL</span>
+            <span class="model-number">725</span>
+            <h4>Mini Torch</h4>
+          </div>
+        </div>
+        <!-- 731 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/731.png"
+                 alt="Model 731 Mini Torch"
+                 loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="model-label">MODEL</span>
+            <span class="model-number">731</span>
+            <h4>Mini Torch</h4>
+          </div>
+        </div>
+        <!-- 732 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/732.png"
+                 alt="Model 732 Mini Torch"
+                 loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="model-label">MODEL</span>
+            <span class="model-number">732</span>
+            <h4>Mini Torch</h4>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
+  
 <section id="services">
   <div class="container">
     <div class="section-label">Our Services</div>
